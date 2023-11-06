@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+
+{% extends 'base.html' %}
+
+
+{% block content %}
+
+<h2 style="color: blueviolet;">{{ message }}</h2>
+
+<form action="" method="post">
+    {% csrf_token %}
+    {{ form.as_div }}
+    <input type="submit" value="Отправить">
+</form>
+
+{% endblock %}
